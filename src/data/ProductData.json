@@ -1,0 +1,155 @@
+{
+    "products": [
+      {
+        "productId": "1",
+        "name": "Wireless Bluetooth Headphones",
+        "description": "High-quality wireless Bluetooth headphones with noise cancellation.",
+        "price": 99.99,
+        "category": "Electronics",
+        "brand": "SoundMax",
+        "stock": 50,
+        "images": [
+          "https://m.media-amazon.com/images/I/51yYK4RGtLL.jpg",
+          "https://example.com/images/product1-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:00:00Z",
+        "updatedAt": "2024-08-16T10:00:00Z"
+      },
+      {
+        "productId": "2",
+        "name": "Smartphone with 5G Connectivity",
+        "description": "Latest smartphone with 5G connectivity and advanced camera features.",
+        "price": 799.99,
+        "category": "Mobile Phones",
+        "brand": "TechPro",
+        "stock": 30,
+        "images": [
+          "https://i.pcmag.com/imagery/reviews/02LTC7buGUIxi5VB9YVcSCU-1.fit_lpad.size_625x365.v1706040657.jpg",
+          "https://example.com/images/product2-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:05:00Z",
+        "updatedAt": "2024-08-16T10:05:00Z"
+      },
+      {
+        "productId": "3",
+        "name": "4K Ultra HD Smart TV",
+        "description": "65-inch 4K Ultra HD Smart TV with HDR and streaming capabilities.",
+        "price": 1299.99,
+        "category": "Televisions",
+        "brand": "VisionX",
+        "stock": 20,
+        "images": [
+          "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_1100,f_auto,q_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/a3b0c3c8-6ce9-11ea-aeea-becc10303f49.jpg",
+          "https://example.com/images/product3-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:10:00Z",
+        "updatedAt": "2024-08-16T10:10:00Z"
+      },
+      {
+        "productId": "4",
+        "name": "Gaming Laptop with RTX 3080",
+        "description": "High-performance gaming laptop with NVIDIA RTX 3080 graphics card.",
+        "price": 1999.99,
+        "category": "Computers",
+        "brand": "GamerPro",
+        "stock": 15,
+        "images": [
+          "https://images.nvidia.com/aem-dam/Solutions/events/ces-2022/news/geforce-rtx-laptops-3080-ti-3070-ti/Acer-3070Ti-Helios-VELAR-03.png",
+          "https://example.com/images/product4-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:15:00Z",
+        "updatedAt": "2024-08-16T10:15:00Z"
+      },
+      {
+        "productId": "5",
+        "name": "Smart Fitness Tracker",
+        "description": "Water-resistant fitness tracker with heart rate monitor and GPS.",
+        "price": 59.99,
+        "category": "Wearables",
+        "brand": "FitTrack",
+        "stock": 100,
+        "images": [
+          "https://m.media-amazon.com/images/I/61GvwAAMvNL.jpg",
+          "https://example.com/images/product5-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:20:00Z",
+        "updatedAt": "2024-08-16T10:20:00Z"
+      },
+      {
+        "productId": "6",
+        "name": "Wireless Charging Pad",
+        "description": "Fast wireless charging pad compatible with all Qi-enabled devices.",
+        "price": 29.99,
+        "category": "Accessories",
+        "brand": "ChargeTech",
+        "stock": 200,
+        "images": [
+          "https://m.media-amazon.com/images/I/61oIAKY9s1L.jpg",
+          "https://example.com/images/product6-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:25:00Z",
+        "updatedAt": "2024-08-16T10:25:00Z"
+      },
+      {
+        "productId": "7",
+        "name": "Portable Bluetooth Speaker",
+        "description": "Compact portable Bluetooth speaker with high-quality sound.",
+        "price": 49.99,
+        "category": "Electronics",
+        "brand": "SoundWave",
+        "stock": 100,
+        "images": [
+          "https://images-cdn.ubuy.co.in/64f8fabde01bf74c341c95f7-portable-bluetooth-speaker-wireless.jpg",
+          "https://example.com/images/product7-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:30:00Z",
+        "updatedAt": "2024-08-16T10:30:00Z"
+      },
+      {
+        "productId": "8",
+        "name": "Wireless Security Camera",
+        "description": "Wireless security camera with motion detection and night vision.",
+        "price": 79.99,
+        "category": "Security",
+        "brand": "SecureCam",
+        "stock": 50,
+        "images": [
+          "https://media.istockphoto.com/id/1272938230/photo/cctv-ip-wireless-security-camera-on-white-background.jpg?s=612x612&w=0&k=20&c=mPCsHM7OwD6aF0p4EF83z7ohRKuGBFKL8F-W1EFrfJk=",
+          "https://example.com/images/product8-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:35:00Z",
+        "updatedAt": "2024-08-16T10:35:00Z"
+      },
+      {
+        "productId": "9",
+        "name": "Wireless Earbuds",
+        "description": "True wireless earbuds with noise-cancelling technology and touch controls.",
+        "price": 79.99,
+        "category": "Electronics",
+        "brand": "SoundBuds",
+        "stock": 100,
+        "images": [
+          "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MY582?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1604515400000",
+          "https://example.com/images/product9-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:40:00Z",
+        "updatedAt": "2024-08-16T10:40:00Z"
+      },
+      {
+        "productId": "10",
+        "name": "Smart Home Security System",
+        "description": "Smart home security system with camera, motion sensors, and smartphone app.",
+        "price": 199.99,
+        "category": "Security",
+        "brand": "SecureHome",
+        "stock": 30,
+        "images": [
+          "https://i.pcmag.com/imagery/roundups/07jY7PeJrdH0O8g0jl4YQ0U-32..v1601059540.jpg",
+          "https://example.com/images/product10-2.jpg"
+        ],
+        "createdAt": "2024-08-16T10:45:00Z",
+        "updatedAt": "2024-08-16T10:45:00Z"
+      }
+    ]
+  }
+  
