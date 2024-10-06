@@ -18,6 +18,7 @@ import Orders from './components/Orders'
 import Test from './components/Test'
 import { useDispatch } from 'react-redux';
 import { loginSuccess } from './features/user/authSlice';
+import Payment from './pages/Payment';
 
 function App() {
   const [displayedProd, setDisplayedProd] = useState([]);
@@ -127,6 +128,7 @@ function App() {
             <Route path="cart" element={<CartComp />} />
             <Route path="profile" element={<Profile />} />
           </Route>
+          <Route path="/payment" element={<Payment></Payment>}></Route>
         </Routes>
       </BrowserRouter>
       <Toaster></Toaster>

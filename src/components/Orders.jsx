@@ -23,7 +23,8 @@ function Orders() {
 
   const fetchOrders = async()=>{
     try {
-      const response = await fetch("http://127.0.0.1:8787/api/users/getById/b039cd40-e197-49dc-913f-73ff83a48c7b");
+      const userId = localStorage.getItem("userId");
+      const response = await fetch(`http://127.0.0.1:8787/api/users/getById/${userId}`);
       const finRes = await response.json();
       setMyOrders(finRes.orders);
       console.log("your order are here :" , myOrders)

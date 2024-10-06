@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 import { addOrder } from '../features/cart/orderSlice';
 import { useEffect,useState } from 'react';
+import { useNavigate } from 'react-router';
 
 function Checkout() {
   const cartItems = useSelector((state) => state.cart);
   const orderId = useSelector((state)=> state.orders);
   const [orderProd , setOrderProd] = useState([]);
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -25,9 +27,10 @@ function Checkout() {
   const tax = total * 0.18;
   const finalTotal = total + tax;
 
-  // const handleProceed = () => {
-  //   dispatch(addOrder(cartItems));
-  // }
+  const handleProceed = () => {
+    // dispatch(addOrder(cartItems));
+    return navigate("/payment")
+  }
 
   const fetchOrderDetails = async ()=>{
     try {
@@ -47,7 +50,7 @@ function Checkout() {
   },[])
 
   return (
-    <div>
+    <div >
       <Navbar />
       <div className="pt-4 px-4 justify-center items-center">
         <h1 className="text-3xl font-bold mb-6 text-center">Checkout</h1>
@@ -76,7 +79,7 @@ function Checkout() {
             </div>
           </div>
           <div className="justify-center items-center mt-6">
-            <button className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-[#1e1e1e] transition-colors" onClick={null}>
+            <button className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-[#1e1e1e] transition-colors" onClick={handleProceed}>
               Proceed to Payment
             </button>
           </div>

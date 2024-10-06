@@ -2,10 +2,13 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../features/cart/cartSlice';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router';
 
 function ProductCard({ product }) {
+  const isAuth = useSelector((state) => state.auth);
   const cartIems = useSelector((state)=> state.cart)
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   //const [prodArr , setProdArr] = useState();
 
   const callToAddCart = async (data)=>{
@@ -28,18 +31,26 @@ function ProductCard({ product }) {
   }
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+
+    if(isAuth.isAuthenticated){
+      dispatch(addToCart(product));
     
-    const data = {
-      userId : localStorage.getItem("userId"),
-      email : localStorage.getItem("email"),
-      token : localStorage.getItem("shopCoToken"),
-      products : [{
-        productId : product.productId,
-        quantity : 1
-      }]
+      const data = {
+        userId : localStorage.getItem("userId"),
+        email : localStorage.getItem("email"),
+        token : localStorage.getItem("shopCoToken"),
+        products : [{
+          productId : product.productId,
+          quantity : 1
+        }]
+      }
+      callToAddCart(data);
     }
-    callToAddCart(data);
+    else{
+      return navigate("/login");
+    }
+
+    
   };
 
   return (

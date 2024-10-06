@@ -98,12 +98,16 @@ function Cart({ navVis }) {
 
     const handleIncrease = (productId, quantity) => {
         //dispatch(increaseQuantity(productId));
+        setLoading(true);
         handleUpdQuantity(productId, quantity, "INC");
+        setLoading(false)
     };
 
     const handleDecrease = (productId, quantity) => {
         //dispatch(decreaseQuantity(productId));
+        setLoading(true);
         handleUpdQuantity(productId, quantity, "DEC");
+        setLoading(false);
     };
 
     const handleRemove = async (productId) => {
@@ -212,19 +216,27 @@ function Cart({ navVis }) {
                                     <h2 className="text-xl font-bold">{item.product.name}</h2>
                                     <p className="text-gray-700">${item.product.price.toFixed(2)}</p>
                                     <div className="flex items-center mt-2">
-                                        <button
+                                        { !loading ? <button
                                             onClick={() => handleDecrease(item.product.productId, item.quantity)}
                                             className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 transition-colors"
                                         >
                                             -
-                                        </button>
+                                        </button> : <button
+                                            className="px-2 py-1 bg-gray-400 rounded transition-colors"
+                                        >
+                                            -
+                                        </button>}
                                         <span className="mx-2">{item.quantity}</span>
-                                        <button
+                                        {!loading ? <button
                                             onClick={() => handleIncrease(item.product.productId, item.quantity)}
                                             className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 transition-colors"
                                         >
                                             +
-                                        </button>
+                                        </button> : <button
+                                            className="px-2 py-1 bg-gray-400 rounded transition-colors"
+                                        >
+                                            +
+                                        </button>}
                                     </div>
                                 </div>
                                 <button
