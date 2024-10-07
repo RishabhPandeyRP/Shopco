@@ -24,7 +24,7 @@ function Cart({ navVis }) {
         try {
             setLoading(true);
             const userId = localStorage.getItem("userId");
-            const response = await fetch(`http://127.0.0.1:8787/api/cart/${userId}`, {
+            const response = await fetch(`https://backend.rishabh17704.workers.dev/api/cart/${userId}`, {
                 method: 'POST',
                 body: JSON.stringify({
                     email: localStorage.getItem("email"),
@@ -46,7 +46,7 @@ function Cart({ navVis }) {
 
     const callToUpdCart = async (data) => {
         try {
-            let url = "http://127.0.0.1:8787/api/cart/add";
+            let url = "https://backend.rishabh17704.workers.dev/api/cart/add";
             const response = await fetch(url, {
                 method: "POST",
                 body: JSON.stringify(data),
@@ -121,7 +121,7 @@ function Cart({ navVis }) {
         }
 
         try {
-            const response = await fetch("http://127.0.0.1:8787/api/cart/remove", {
+            const response = await fetch("https://backend.rishabh17704.workers.dev/api/cart/remove", {
                 method: "DELETE",
                 body: JSON.stringify(data),
                 headers: {
@@ -141,7 +141,7 @@ function Cart({ navVis }) {
 
     const orderGeneration = async (data) => {
         try {
-            let url = "http://127.0.0.1:8787/api/order/register";
+            let url = "https://backend.rishabh17704.workers.dev/api/order/register";
             const response = await fetch(url, {
                 method: "POST",
                 body: JSON.stringify(data),

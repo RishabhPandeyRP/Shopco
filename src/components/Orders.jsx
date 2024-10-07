@@ -24,7 +24,7 @@ function Orders() {
   const fetchOrders = async()=>{
     try {
       const userId = localStorage.getItem("userId");
-      const response = await fetch(`http://127.0.0.1:8787/api/users/getById/${userId}`);
+      const response = await fetch(`https://backend.rishabh17704.workers.dev/api/users/getById/${userId}`);
       const finRes = await response.json();
       setMyOrders(finRes.orders);
       console.log("your order are here :" , myOrders)
@@ -71,7 +71,7 @@ function Orders() {
                 </th>
               </tr>
             </thead>
-            <tbody className='h-[1000px] overflow-y-auto'>
+            <tbody className='h-[1000px] overflow-y-scroll'>
                 {console.log(myOrders)}
               {myOrders.map((order) => (
                 <tr key={order.orderId}>

@@ -20,7 +20,7 @@ function Profile() {
     try {
       setLoading(true);
       const userid = localStorage.getItem("userId");
-      const response = await fetch(`http://127.0.0.1:8787/api/users/getById/${userid}`);
+      const response = await fetch(`https://backend.rishabh17704.workers.dev/api/users/getById/${userid}`);
       const finRes = await response.json();
 
       setMyOrders(finRes.orders);
@@ -67,7 +67,7 @@ function Profile() {
 
       //  http://127.0.0.1:8787/api/address/register
 
-      let url = "http://127.0.0.1:8787/api/address/register";
+      let url = "https://backend.rishabh17704.workers.dev/api/address/register";
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(add),

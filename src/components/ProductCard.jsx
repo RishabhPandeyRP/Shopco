@@ -13,7 +13,7 @@ function ProductCard({ product }) {
 
   const callToAddCart = async (data)=>{
     try {
-      let url = "http://127.0.0.1:8787/api/cart/add";
+      let url = "https://backend.rishabh17704.workers.dev/api/cart/add";
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(data),

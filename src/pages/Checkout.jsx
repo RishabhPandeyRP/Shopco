@@ -34,7 +34,7 @@ function Checkout() {
 
   const fetchOrderDetails = async ()=>{
     try {
-      let url = `http://127.0.0.1:8787/api/order/getById/${orderId.orderId}`;
+      let url = `https://backend.rishabh17704.workers.dev/api/order/getById/${orderId.orderId}`;
       const response = await fetch(url);
       const finalRes = await response.json();
       console.log("data from order fetching : ",finalRes)

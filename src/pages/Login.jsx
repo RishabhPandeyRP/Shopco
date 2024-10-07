@@ -18,7 +18,7 @@ function Login() {
     console.log("data is : ", data);
 
     try {
-      let url = "http://127.0.0.1:8787/api/user/logIn";
+      let url = "https://backend.rishabh17704.workers.dev/api/user/logIn";
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(data),
@@ -117,7 +117,11 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <div className='text-sm text-red-400'>
+              *password should be 6 characters long
             </div>
+            </div>
+            
             <div className="flex justify-center">
               {
                 loading ? <div

@@ -51,7 +51,7 @@ function App() {
       }
       else{
         console.log("in app 2.1")
-        let url = "http://127.0.0.1:8787/api/tokenVerify";
+        let url = "https://backend.rishabh17704.workers.dev/api/tokenVerify";
         const response = await fetch(url, {
           method: "POST",
           body: JSON.stringify({token}),

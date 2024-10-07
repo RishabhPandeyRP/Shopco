@@ -26,7 +26,7 @@ function Signup() {
     console.log("data is : " , data);
     
     try {
-      let url = "http://127.0.0.1:8787/api/users/register";
+      let url = "https://backend.rishabh17704.workers.dev/api/users/register";
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(data),
